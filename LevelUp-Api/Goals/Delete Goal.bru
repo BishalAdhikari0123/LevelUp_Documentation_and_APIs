@@ -1,0 +1,19 @@
+meta {
+  name: Delete Goal
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{base_url}}/goals/:goalId
+  body: none
+  auth: bearer
+}
+
+params:path {
+  goalId: your-goal-id-here
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}

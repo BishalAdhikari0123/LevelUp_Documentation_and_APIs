@@ -1,0 +1,24 @@
+meta {
+  name: Create Clan
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url}}/clan/create
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+  {
+    "name": "Elite Warriors",
+    "communityId": "your-community-id-here",
+    "isPrivate": false,
+    "description": "A clan for elite gamers"
+  }
+}

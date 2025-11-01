@@ -1,0 +1,19 @@
+meta {
+  name: Delete Clan
+  type: http
+  seq: 9
+}
+
+delete {
+  url: {{base_url}}/clan/:clanId
+  body: none
+  auth: bearer
+}
+
+params:path {
+  clanId: your-clan-id-here
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}

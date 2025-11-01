@@ -1,0 +1,19 @@
+meta {
+  name: Leave Community
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{base_url}}/community/:communityId/leave
+  body: none
+  auth: bearer
+}
+
+params:path {
+  communityId: your-community-id-here
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}

@@ -1,0 +1,15 @@
+meta {
+  name: Get My Goals
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/goals/my
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}

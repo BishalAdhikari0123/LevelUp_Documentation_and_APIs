@@ -1,0 +1,19 @@
+meta {
+  name: Join Community
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{base_url}}/community/:communityId/join
+  body: none
+  auth: bearer
+}
+
+params:path {
+  communityId: your-community-id-here
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}

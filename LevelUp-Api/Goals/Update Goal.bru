@@ -1,0 +1,29 @@
+meta {
+  name: Update Goal
+  type: http
+  seq: 3
+}
+
+patch {
+  url: {{base_url}}/goals/:goalId
+  body: json
+  auth: bearer
+}
+
+params:path {
+  goalId: your-goal-id-here
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+  {
+    "title": "Updated Goal Title",
+    "description": "Updated description",
+    "category": "PRODUCTIVITY",
+    "targetDate": "2025-12-31",
+    "completed": false
+  }
+}

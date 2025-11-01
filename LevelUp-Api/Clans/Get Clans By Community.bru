@@ -1,0 +1,19 @@
+meta {
+  name: Get Clans By Community
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{base_url}}/clan/:communityId
+  body: none
+  auth: bearer
+}
+
+params:path {
+  communityId: your-community-id-here
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}

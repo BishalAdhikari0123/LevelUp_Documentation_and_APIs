@@ -1,0 +1,23 @@
+meta {
+  name: Upload Community Photo
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/community/:communityId/upload-photo
+  body: multipartForm
+  auth: bearer
+}
+
+params:path {
+  communityId: your-community-id-here
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:multipart-form {
+  photo: @file(/path/to/your/community-image.jpg)
+}

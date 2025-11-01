@@ -1,0 +1,19 @@
+meta {
+  name: Upload Profile Picture
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{base_url}}/auth/upload-profile-picture
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:multipart-form {
+  profilePicture: @file(/path/to/your/image.jpg)
+}

@@ -1,0 +1,22 @@
+meta {
+  name: Create Community with Photo
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url}}/community/create
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:multipart-form {
+  communityName: My Photo Community
+  memberLimit: 100
+  isPrivate: false
+  photo: @file(/path/to/your/community-image.jpg)
+}

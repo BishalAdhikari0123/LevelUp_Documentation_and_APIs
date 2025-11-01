@@ -1,0 +1,25 @@
+meta {
+  name: Transfer Ownership
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{base_url}}/community/:communityId/transfer-ownership
+  body: json
+  auth: bearer
+}
+
+params:path {
+  communityId: your-community-id-here
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+  {
+    "newOwnerId": "new-owner-user-id"
+  }
+}

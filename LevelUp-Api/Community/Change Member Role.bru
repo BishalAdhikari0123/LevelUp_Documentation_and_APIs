@@ -1,0 +1,26 @@
+meta {
+  name: Change Member Role
+  type: http
+  seq: 10
+}
+
+patch {
+  url: {{base_url}}/community/:communityId/members/:memberId/role
+  body: json
+  auth: bearer
+}
+
+params:path {
+  communityId: your-community-id-here
+  memberId: member-user-id-here
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+  {
+    "role": "ADMIN"
+  }
+}

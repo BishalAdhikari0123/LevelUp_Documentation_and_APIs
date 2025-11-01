@@ -1,0 +1,20 @@
+meta {
+  name: Remove Member
+  type: http
+  seq: 9
+}
+
+delete {
+  url: {{base_url}}/community/:communityId/members/:memberId
+  body: none
+  auth: bearer
+}
+
+params:path {
+  communityId: your-community-id-here
+  memberId: member-user-id-here
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}

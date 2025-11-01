@@ -1,0 +1,20 @@
+meta {
+  name: OAuth Register
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{base_url}}/auth/oauth/register
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "oauth@example.com",
+    "username": "oauthuser",
+    "provider": "google",
+    "providerId": "google-provider-id-123"
+  }
+}

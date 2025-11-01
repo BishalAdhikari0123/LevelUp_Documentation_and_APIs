@@ -1,0 +1,21 @@
+meta {
+  name: Leave Clan
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/clan/leave
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+  {
+    "clanId": "your-clan-id-here"
+  }
+}
