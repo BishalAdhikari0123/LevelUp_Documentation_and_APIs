@@ -5,13 +5,9 @@ meta {
 }
 
 post {
-  url: {{base_url}}/community/:communityId/upload-photo
+  url: {{base_url}}/community/cmgg15x8t0004uxukmksny1vz/upload-photo
   body: multipartForm
   auth: bearer
-}
-
-params:path {
-  communityId: your-community-id-here
 }
 
 auth:bearer {
@@ -19,5 +15,5 @@ auth:bearer {
 }
 
 body:multipart-form {
-  photo: @file(/path/to/your/community-image.jpg)
+  photo: @file(C:\Users\user\Pictures\Screenshots\Screenshot 2025-10-19 223219.png)
 }

@@ -10,10 +10,14 @@ post {
   auth: bearer
 }
 
+headers {
+  x-language: nep
+}
+
 auth:bearer {
   token: {{auth_token}}
 }
 
 body:multipart-form {
-  profilePicture: @file(/path/to/your/image.jpg)
+  profilePicture: @file(C:\Users\user\Pictures\Screenshots\Screenshot 2025-09-20 183535.png)
 }
