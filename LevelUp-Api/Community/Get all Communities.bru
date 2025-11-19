@@ -1,0 +1,19 @@
+meta {
+  name: Get all Communities
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{base_url}}/community
+  body: none
+  auth: bearer
+}
+
+headers {
+  x-language: nep
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
