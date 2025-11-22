@@ -1,0 +1,21 @@
+meta {
+  name: get community mssage
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/socket.io/?EIO=4&transport=websocket
+  body: none
+  auth: inherit
+}
+
+params:query {
+  EIO: 4
+  transport: websocket
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

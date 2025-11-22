@@ -1,0 +1,34 @@
+meta {
+  name: Pin community
+  type: http
+  seq: 11
+}
+
+post {
+  url: {{base_url}}/community/toggle-pin
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+  {
+      "communityIds": [
+          "cmhhjknse000huikowl4dwo7j",
+          "cmhhic0qc000duiko5a63n0mz",
+          "cmhhib3s90005uikotiwz9jbr",
+          "cmhhibogu0009uikot339g4yb",
+          "cmhhi0czc0001uikoi81wufbj"
+      ]
+  }
+}
+
+body:multipart-form {
+  communityName: My Photoq Community
+  memberLimit: 100
+  isPrivate: false
+  photo: @file()
+}

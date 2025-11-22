@@ -1,13 +1,17 @@
 meta {
-  name: Create Community
+  name: specific community
   type: http
-  seq: 1
+  seq: 13
 }
 
-post {
-  url: {{base_url}}/community/create
+get {
+  url: {{base_url}}/community/search?q=a
   body: multipartForm
   auth: bearer
+}
+
+params:query {
+  q: a
 }
 
 auth:bearer {
