@@ -1,0 +1,32 @@
+meta {
+  name: health
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/ai/generate
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "goals": [
+      "workout",
+      "upper body"
+    ],
+    "difficulty": "Intermediate",
+    "count": 3,
+    "level": 12,
+    "status": "Intermediate",
+    "xp": 2400,
+    "type": "daily"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
